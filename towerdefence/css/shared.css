@@ -1,0 +1,287 @@
+* { box-sizing: border-box;
+	font-family: 'VT323', monospace;
+	font-size: 1rem;
+	user-select: none;
+	-moz-user-select: none;
+	cursor: default;
+}
+
+canvas {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+html, body {background-color: rgb(63, 63, 63);}
+
+h1 {font-size: 2.2rem; text-decoration: underline;color: rgb(255, 255, 220);}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+	padding-left: 2px !important;
+	padding-right: 2px !important;
+}
+
+.popModal {
+	display: none;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	z-index: 105;
+	box-shadow: 0px 0px 12px 0px black;
+}
+
+.col-auto-width {
+	width: auto;
+}
+
+#tooltip {
+	display: none;
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	background-color: white;
+	border-radius: 4px;
+	padding: 4px;
+	box-shadow: 1px 1px 3px 0px black;
+
+	z-index: 106;
+	cursor: default;
+}
+
+#tooltip-text {
+	color: black;
+	line-height: 2rem;
+}
+
+.tooltip-text {
+	float: left;
+}
+
+.tooltip-icon {
+	float: left;
+	margin-top: 4px;
+	margin-left: 4px;
+}
+
+.row {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	width: 100%;
+}
+
+.shadow {
+		text-shadow:	 1px  1px 1px rgba(0,0,0,0.5),
+						 1px -1px 1px rgba(0,0,0,0.5),
+						-1px  1px 1px rgba(0,0,0,0.5),
+						-1px -1px 1px rgba(0,0,0,0.5),
+						 4px  4px 4px rgba(0,0,0,0.5),
+						 4px -4px 4px rgba(0,0,0,0.5),
+						-4px  4px 4px rgba(0,0,0,0.5),
+						-4px -4px 4px rgba(0,0,0,0.5);
+}
+
+.list-group {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+.list-group-item :first-child {
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+}
+
+.li-tower:hover {
+	background-color: rgb(93, 93, 93) !important;
+	transition: background-color 0.15s ease-in-out;
+}
+
+.li-spell:hover {
+	background-color: rgb(93, 93, 93) !important;
+	transition: background-color 0.15s ease-in-out;
+}
+
+.li-tower:first-child {
+	margin-top: 0px;
+}
+
+.li-tower-border {
+	border-top: 1px dashed rgba(255, 255, 220, 0.4);
+	border-bottom: 1px dashed rgba(255, 255, 220, 0.4);
+}
+
+.li-spell-border {
+	border-top: 1px dashed rgba(200, 200, 255, 0.4);
+	border-bottom: 1px dashed rgba(200, 200, 255, 0.4);
+}
+
+.li-tower {
+	border-radius: 4px;
+	border: 1px dashed rgba(255, 255, 220, 0.4);
+	margin: 0px;
+	margin-top: 0px;
+	margin-bottom: 4px;
+	padding: 4px;
+	color: rgb(255, 255, 220) !important;
+	font-size: 1.4rem;
+	transition: background-color 0.25s ease-in-out;
+}
+
+.li-spell {
+	border-radius: 4px;
+	border: 1px dashed rgba(200, 200, 255, 0.4);
+	margin: 0px;
+	margin-top: 0px;
+	margin-bottom: 4px;
+	padding: 4px;
+	color: rgb(200, 200, 255) !important;
+	font-size: 1.4rem;
+	transition: background-color 0.25s ease-in-out;
+}
+
+.btn {
+	margin-top: 4px !important;
+	margin-bottom: 4px !important;
+}
+
+.btn-menu {
+	width: 100%;
+	font-size: 1.4rem;
+	padding: 0px;
+	transition: background-color 0.15s ease-in-out;
+}
+
+.btn-tower, .btn-spell {
+	width: 100%;
+	font-size: 1.3rem;
+	padding: 0px;
+	margin: 0px;
+}
+
+.ui- {
+	color: #420;
+	font-weight: lighter;
+}
+
+.ui-resource {
+	width: 100px;
+}
+
+.ui-icon {
+	padding-top: 2px;
+	width: 30px !important;
+}
+
+.ui-text {
+	font-size: 1.3rem;
+}
+
+.btn-menu.color-tower.active {background-color: rgba(255, 255, 220, 0.2) !important; transition: background-color 0.15s ease-in-out;}
+.btn-menu.color-spell.active {background-color: rgba(200, 200, 255, 0.2) !important; transition: background-color 0.15s ease-in-out;}
+
+.color-tower {color: rgb(255, 255, 220) !important;}
+.color-spell {color: rgb(200, 200, 255) !important;}
+
+#topCol, #canvasCol, #menuCol, #bottomCol, #timeCol {
+	border: 1px solid rgba(255, 255, 255, 0.66);
+}
+
+#topCol {
+	padding-top: 2px; 
+	border-bottom: none;
+	padding-bottom: 1px; 
+}
+
+#canvasCol {
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+#menuCol {
+	border-left: none;
+	height: auto;
+}
+
+#timeCol {
+	padding-top: 2px; 
+	padding-bottom: 2px; 
+	padding-left: 2px;
+	padding-right: 2px;
+	border-top: none;
+}
+
+#bottomCol {
+	padding-top: 2px; 
+	padding-bottom: 1px; 
+	border-top: none;
+	flex: none;
+	overflow: hidden;
+}
+
+#progressTimer {
+	width: 50%;
+	color: black;
+	border-right: 1px solid black;
+}
+
+.progress {
+	height: 24px;
+}
+
+.waveindicator {
+	width: 5000px;
+}
+
+.wave- {
+	color: #000;
+	font-weight: lighter;
+}
+
+.wave-box {
+	width: 100px;
+	display: block;
+	float: left;
+	margin-right: 2px;
+}
+
+.wave-box.wave-indicator {
+	width: 64px !important;
+	display: block;
+	float: left;
+	margin-right: 2px;
+	border-right: 1px solid rgba(255, 255, 255, 0.66);
+}
+
+.wave-icon {
+	width: 20px !important;
+	cursor: pointer;
+}
+
+.wave-text {
+	font-size: 1.1rem;
+}
+
+.col-physical {
+	color: white !important;
+}
+
+.wave-normal {background-color: hsl(0, 10%, 55%);}
+.wave-normal:hover {background-color: hsl(0, 10%, 45%);}
+.wave-air {background-color: hsl(180, 30%, 65%);}
+.wave-air:hover {background-color: hsl(180, 30%, 45%);}
+.wave-boss {background-color: hsl(0, 60%, 65%);}
+.wave-boss:hover {background-color: hsl(0, 60%, 45%);}
+.wave-swarm {background-color: hsl(60, 50%, 65%);}
+.wave-swarm:hover {background-color: hsl(60, 50%, 45%);}
+.wave-hp {background-color: hsl(290, 50%, 65%);}
+.wave-hp:hover {background-color: hsl(290, 50%, 45%);}
+.wave-undead {background-color: hsl(0, 0%, 95%);}
+.wave-undead:hover {background-color: hsl(0, 0%, 80%);}
+
+#spellMenuRow, #towerMenuRow {display: none;}
+.ui-resource {display: none;}
+.wave-box {display: none;}

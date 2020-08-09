@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> &times; Toast Defence &times; </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=1">
+
+	<link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+
+	<link rel="stylesheet" type="text/css" href="../libs/bmd.min.css">
+
+	<link rel="stylesheet" type="text/css" href="./css/shared.css">
+</head>
+
+<body>
+
+<!-- 'Tooltip' -->
+<div id="tooltip"><div id="tooltip-text">.</div></div>
+<!-- / 'Tooltip' -->
+
+<!-- 'Tower Selection' Modal -->
+<div id="towerModal" class="popModal">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">Selection</h4>
+			<button type="button" class="close modalClose" data-target="#towerModal">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+			<p>Modal body text goes here.</p>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-secondary modalClose" data-target="#towerModal">Close</button>
+		</div>
+	</div>
+</div>
+<!-- / 'Tower Selection' Modal -->
+
+<div class="container-fluid text-center bg-dark">
+	<div class="row">
+		<div class="col">
+			<h1 class="shadow">Toast Defence</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col" id="topCol">
+			<a id="resource-energy" class="badge badge-info ui-resource tooltipped" data-tooltiptext="Temporal Energy"><span>
+				<div class="ui- ui-icon material-icons">flash_on</div>
+				<div class="ui- ui-text">0</div>
+			</span></a>
+			<a id="resource-lifes" class="badge badge-light ui-resource tooltipped" data-tooltiptext="Life"><span>
+				<div class="ui- ui-icon material-icons">favorite</div>
+				<div class="ui- ui-text">75</div>
+			</span></a>
+			<a id="resource-currency" class="badge badge-warning ui-resource tooltipped" data-tooltiptext="Basic Currency"><span>
+				<div class="ui- ui-icon material-icons">api</div>
+				<div class="ui- ui-text">15</div>
+			</span></a>
+			<a id="resource-upgrades" class="badge badge-danger ui-resource tooltipped" data-tooltiptext="Upgrade Currency"><span>
+				<div class="ui- ui-icon material-icons">label_important</div>
+				<div class="ui- ui-text">0</div>
+			</span></a>
+			<a id="resource-prestige" class="badge badge-success ui-resource tooltipped" data-tooltiptext="Prestige Currency"><span>
+				<div class="ui- ui-icon material-icons">polymer</div>
+				<div class="ui- ui-text">0</div>
+			</span></a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-auto-width" id="canvasCol"></div>
+		<div class="col col-auto-width" id="menuCol">
+			<div class="row">
+				<div class="col">
+					<div class="btn btn-light btn-menu color-tower active menuTabSwitch" data-target="#towerMenuRow" type="button">Towers</div>
+				</div>
+				<div class="col">
+					<div class="btn btn-light btn-menu color-spell menuTabSwitch" data-target="#spellMenuRow" type="button">Spells</div>
+				</div>
+			</div>
+			<div class="row menuRow" id="towerMenuRow">
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-action li-tower">
+						<div class="row pb-1">
+							<div class="col col-3 text-left">
+								<span class="gen-colors">Physical</span>
+							</div>
+							<div class="col col-9 text-left">
+								<span class="gen-colors">Laser Turret</span>
+							</div>
+						</div>
+						<div class="row py-2 li-tower-border">
+							<div class="col col-6 text-left">
+								1.2 Shots /s<br/>
+								2.5 Damage
+							</div>
+							<div class="col col-6 text-left">
+								The Most basic Tower, no advantages, but also no disadvantages
+							</div>
+						</div>
+						<div class="row">
+							<div class="col pt-1">
+								<div class="tooltipped btn btn-light btn-tower color-tower" data-id="0" data-tooltiptext="<div class='tooltip-text text-dark'>Costs 7 </div><div class='tooltip-icon material-icons text-dark'>api</div>" type="button">Buy</div>
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item list-group-item-action li-tower">
+						<div class="row pb-1">
+							<div class="col col-3 text-left">
+								<span class="gen-colors">Physical</span>
+							</div>
+							<div class="col col-9 text-left">
+								<span class="gen-colors">Bomb Slinger</span>
+							</div>
+						</div>
+						<div class="row py-2 li-tower-border">
+							<div class="col col-6 text-left">
+								0.66 Shots /s<br/>
+								5.0 Damage<br/>
+								Fire on the Ground
+							</div>
+							<div class="col col-6 text-left">
+								More advanced Tower with an Area of Effect Attack.
+							</div>
+						</div>
+						<div class="row">
+							<div class="col pt-1">
+								<div class="tooltipped btn btn-light btn-tower color-tower" data-id="1" data-tooltiptext="<div class='tooltip-text text-dark'>Costs 20 </div><div class='tooltip-icon material-icons text-dark'>api</div>" type="button">Buy</div>
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item list-group-item-action li-tower">
+						<div class="row pb-1">
+							<div class="col col-3 text-left">
+								<span class="gen-colors">Physical</span>
+							</div>
+							<div class="col col-9 text-left">
+								<span class="gen-colors">Sharp Tower</span>
+							</div>
+						</div>
+						<div class="row py-2 li-tower-border">
+							<div class="col col-6 text-left">
+								1/24 Shots /t<br/>
+								0.1 Damage + 2 Bleed Damage <br/>
+								Bleed Effect
+							</div>
+							<div class="col col-6 text-left">
+								More advanced Tower that inflicts a Bleeding Effect.
+							</div>
+						</div>
+						<div class="row">
+							<div class="col pt-1">
+								<div class="tooltipped btn btn-light btn-tower color-tower" data-id="2" data-tooltiptext="<div class='tooltip-text text-dark'>Costs 16 </div><div class='tooltip-icon material-icons text-dark'>api</div>" type="button">Buy</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="row menuRow" id="spellMenuRow">
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-action li-spell">
+						<div class="row pb-1">
+							<div class="col col-3 text-left">
+								<span class="gen-colors">Ice</span>
+							</div>
+							<div class="col col-9 text-left">
+								<span class="gen-colors">Blizzard</span>
+							</div>
+						</div>
+						<div class="row py-2 li-spell-border">
+							<div class="col col-6 text-left">
+								5 Second Freeze<br/>
+								10 Second Slow<br/>
+								Deals a little Damage
+							</div>
+							<div class="col col-6 text-left">
+								Crowd Control is important
+							</div>
+						</div>
+						<div class="row">
+							<div class="col pt-1">
+								<div class="tooltipped btn btn-light btn-spell color-spell" data-id="0" data-tooltiptext="<div class='tooltip-text text-dark'>Costs 15 </div><div class='tooltip-icon material-icons text-dark'>api</div>" type="button">Use</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col" id="timeCol">
+			<div class="progress">
+				<div id="progressTimer" class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar">00m:30s</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="flex-wrap: nowrap; display: block;">
+		<div class="col text-left clearfix" id="bottomCol">
+			<div class="waveindicator">
+				<a class="tooltipped badge wave-box wave-indicator" data-tooltiptext="[WAVE xxx]<br/>Upcoming Wave: xxx<br/>Hitpoints: xxx"><span>
+					<div class="wave- wave-icon material-icons text-light">first_page</div>
+					<div class="wave- wave-text text-light">&nbsp;</div>
+					<div class="wave- wave-text text-light">I</div>
+				</span></a>
+				<a class="tooltipped badge wave-box wave-normal" data-tooltiptext="[WAVE xxx]<br/>Enemy Type: Normal<br/>Hitpoints: xxx"><span>
+					<div class="wave- wave-icon material-icons">stop</div>
+					<div class="wave- wave-text">Normal</div>
+					<div class="wave- wave-text">I</div>
+				</span></a>
+				<a class="tooltipped badge wave-box wave-air" data-tooltiptext="[WAVE xxx]<br/>Enemy Type: Air<br/>Hitpoints: xxx"><span>
+					<div class="wave- wave-icon material-icons">airplanemode_active</div>
+					<div class="wave- wave-text">Luft</div>
+					<div class="wave- wave-text">IV</div>
+				</span></a>
+				<a class="tooltipped badge wave-box wave-swarm" data-tooltiptext="[WAVE xxx]<br/>Enemy Type: Swarm<br/>Hitpoints: xxx"><span>
+					<div class="wave- wave-icon material-icons">view_comfy</div>
+					<div class="wave- wave-text">Schwarm</div>
+					<div class="wave- wave-text">IX</div>
+				</span></a>
+				<a class="tooltipped badge wave-box wave-boss" data-tooltiptext="[WAVE xxx]<br/>Enemy Type: Boss!<br/>Hitpoints: xxx"><span>
+					<div class="wave- wave-icon material-icons">format_bold</div>
+					<div class="wave- wave-text">Boss</div>
+					<div class="wave- wave-text">X</div>
+				</span></a>
+				<a class="tooltipped badge wave-box wave-hp" data-tooltiptext="[WAVE xxx]<br/>Enemy Type: Lively<br/>Hitpoints: xxx"><span>
+					<div class="wave- wave-icon material-icons">favorite_border</div>
+					<div class="wave- wave-text">Lebendig</div>
+					<div class="wave- wave-text">XII</div>
+				</span></a>
+				<a class="tooltipped badge wave-box wave-undead" data-tooltiptext="[WAVE xxx]<br/>Enemy Type: Undead<br/>Hitpoints: xxx"><span>
+					<div class="wave- wave-icon material-icons">all_inclusive</div>
+					<div class="wave- wave-text">Untot</div>
+					<div class="wave- wave-text">XIII</div>
+				</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+<!-- libraries -->
+<script src="../libs/jquery.js"></script>
+<script src="../libs/popper.js"></script>
+<script src="../libs/bmd.min.js"></script>
+<script src="../libs/p5.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"></script>
+<script src="https://unpkg.com/p5.collide2d"></script> 
+<!--------------->
+
+<!-- main -->
+<script defer src="./src/main.js"></script>
+<!---------->
+
+</html>

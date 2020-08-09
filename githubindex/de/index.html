@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<title>Nicolai Krechel</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=1" lang="de">
+
+	<link rel="icon" href="../../img/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="../css/bmd.min.css">
+	
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/hover.css">
+</head>
+
+<body>
+
+<input id="shareText" type="text" value="Check out this fresh website I found; http://rewind1337.github.io/"/>
+
+	<div class="container-fluid">
+		<div class="row section" id="card">
+			<div class="col">
+				<div class="flip-card mx-auto">
+					<div class="flip-card-inner">
+						<div class="flip-card-front" id="imageCard">
+							<img class="flip-card-img" src="../img/avatar.png">
+						</div>
+						<div class="flip-card-back" id="characterCard">
+							<h1>Nicolai Krechel</h1>
+							<p>Frontend & Design</p>
+						</div>
+					</div>
+				</div>
+				<ul class="socialLinks">
+					<li><span class="material-icons large-icon" id="bookmarkBtn">bookmark</span></li>
+					<li><span class="material-icons large-icon" id="shareBtn">share</span></li>
+					<li><span class="material-icons large-icon" id="darkModeBtn">invert_colors</span></li>
+					<li><span class="material-icons large-icon" id="languageBtn">language</span></li>
+					<li><span class="material-icons large-icon" id="reportABugBtn">bug_report</span></li>
+				</ul> 
+			</div>
+		</div>
+		<div class="row section" id="footer">
+			<div class="col">
+				<span>Hier könnte Ihre Werbung stehen, aber scheint so als hätte keiner Interesse...</span>
+			</div>
+		</div>
+		<div class="row scrollover">
+			<div class="row section" id="projects">
+				<div class="col col-12">
+					<h4 class="h4" id="projects-title">Meine Projekte</h4>
+				</div>
+				<div class="col col-1 my-auto">
+					<span class="material-icons large-icon" id="slideLeft">keyboard_arrow_left</span>
+				</div>
+				<div class="col col-10">
+
+					<div class="project" data-id="0" data-folder="360snake">
+						<h3 class="h3 project-name">360 Snake</h3>
+						<img src="../thumbs/360snake.png" class="project-img"/>
+						<br/>
+						<span class="project-text">Normale Snake-Spielweise, nur ohne Raster</span>
+						<br/>
+						<span class="project-links">
+							<div class="btn-raised btn btn-primary project-link text-light">Spielen</div>
+							<div class="btn btn-success project-repo text-light">Repository</div>
+						</span>
+						<br/>
+						<span class="project-info">
+							<a class="badge badge-2020">2020</a>
+							<a class="badge badge-js">JS</a>
+						</span>
+					</div>
+
+					<div class="project" data-id="1" data-folder="githubindex">
+						<h3 class="h3 project-name">Diese GitHub Seite</h3>
+						<img src="../thumbs/thisgithubpage.png" class="project-img"/>
+						<br/>
+						<span class="project-text">Was ihr jetzt gerade seht :)</span>
+						<br/>
+						<span class="project-links">
+							<div class="btn btn-success project-repo text-light">Repository</div>
+						</span>
+						<br/>
+						<span class="project-info">
+							<a class="badge badge-2020">2020</a>
+							<a class="badge badge-web">Web</a>
+						</span>
+					</div>
+
+					<div class="project" data-id="2" data-folder="towerdefence">
+						<h3 class="h3 project-name">Tower Defence</h3>
+						<img src="../thumbs/towerdefence.png" class="project-img"/>
+						<br/>
+						<span class="project-text">Platzhalter</span>
+						<br/>
+						<span class="project-links">
+							<div class="btn btn-primary project-link text-light">Spielen</div>
+							<div class="btn btn-success project-repo text-light">Repository</div>
+						</span>
+						<br/>
+						<span class="project-info">
+							<a class="badge badge-2020">2020</a>
+							<a class="badge badge-js">JS</a>
+						</span>
+					</div>
+
+					<div class="project" data-id="3" data-folder="panzers">
+						<h3 class="h3 project-name">Panzers</h3>
+						<img src="../thumbs/panzers.png" class="project-img"/>
+						<br/>
+						<span class="project-text">Platzhalter</span>
+						<br/>
+						<span class="project-links">
+							<div class="btn btn-primary project-link text-light">Spielen</div>
+							<div class="btn btn-success project-repo text-light">Repository</div>
+						</span>
+						<br/>
+						<span class="project-info">
+							<a class="badge badge-2020">2020</a>
+							<a class="badge badge-js">JS</a>
+						</span>
+					</div>
+				</div>
+				<div class="col col-1 my-auto">
+					<span class="material-icons large-icon" id="slideRight">keyboard_arrow_right</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="bugReportModal" class="modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Einen Fehler Gefunden?</h4>
+					<button type="button" class="close closeModal" data-target="#bugReportModal">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col">	
+							<div class="form-group">
+								<label for="bugReportMessage">Was ist der Bug?</label>
+								<textarea type="text" class="form-control" id="bugReportMessage" placeholder="Sei so spezifisch wie du sein kannst"></textarea>
+								<small class="form-text text-muted">Danke dass du dir die Zeit nimmst!<br>Ich versuche so schnell zu antworten wie möglich.</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="sendBugReportBtn">E-Mail Schreiben</button>
+					<button type="button" class="btn btn-secondary closeModal" data-target="#bugReportModal">Schließen</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="languageSelectModal" class="modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Sprache Ändern</h5>
+					<button type="button" class="close closeModal" data-target="#languageSelectModal">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="languageSelect">Sprache</label>
+						<select class="form-control" id="languageSelect">
+							<option value="en">Englisch</option>
+							<option default selected value="de">Deutsch</option>
+						</select>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary closeModal" data-target="#languageSelectModal">Schließen</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="../../libs/jquery.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="../../libs/bmd.min.js"></script>
+<script src="../../libs/p5.js"></script>
+<script src="../src/index.js"></script>
+
+</html>
