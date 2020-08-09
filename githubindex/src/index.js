@@ -125,20 +125,16 @@ $(document).ready(function () {
 
 function toggleDarkMode() {
 	if (!darkmode) {
-		$(".section").css("background-color", "rgb(30, 30, 30)");
-		$(".section").css("box-shadow", "1px 1px 1px rgba(255, 255, 255, 0.33), 1px -1px 1px rgba(255, 255, 255, 0.33), -1px 1px 1px rgba(255, 255, 255, 0.33), -1px -1px 1px rgba(255, 255, 255, 0.33)");
-		$(".section").css("color", "white");
-		$(".large-icon").css("color", "white");
-		$(".flip-card-img").css("box-shadow", "1px  1px 1px white,1px -1px 1px white,-1px  1px 1px white,-1px -1px 1px white,4px  4px 4px rgba(255, 255, 255, 0.3),4px -4px 4px rgba(255, 255, 255, 0.3),-4px  4px 4px rgba(255, 255, 255, 0.3),-4px -4px 4px rgba(255, 255, 255, 0.3)")
-		$(".project-img").css("border", "1px solid white")
+		$(".section").addClass("darkmode");
+		$(".large-icon").addClass("darkmode");
+		$(".flip-card-img").addClass("darkmode");
+		$(".project-img").addClass("darkmode");
 		darkmode = true;
 	} else {
-		$(".section").css("background-color", "white");
-		$(".section").css("box-shadow", "1px 1px 1px rgba(0, 0, 0, 0.33), 1px -1px 1px rgba(0, 0, 0, 0.33), -1px 1px 1px rgba(0, 0, 0, 0.33), -1px -1px 1px rgba(0, 0, 0, 0.33)");
-		$(".section").css("color", "black");
-		$(".large-icon").css("color", "black");
-		$(".flip-card-img").css("box-shadow", "1px  1px 1px black,1px -1px 1px black,-1px  1px 1px black,-1px -1px 1px black,4px  4px 4px rgba(0, 0, 0, 0.3),4px -4px 4px rgba(0, 0, 0, 0.3),-4px  4px 4px rgba(0, 0, 0, 0.3),-4px -4px 4px rgba(0, 0, 0, 0.3)")
-		$(".project-img").css("border", "1px solid black")
+		$(".section").removeClass("darkmode");
+		$(".large-icon").removeClass("darkmode");
+		$(".flip-card-img").removeClass("darkmode");
+		$(".project-img").removeClass("darkmode");
 		darkmode = false;
 	}
 	saveCookies();

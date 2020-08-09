@@ -33,10 +33,30 @@ body {
 	transition: color .75s ease-in-out;
 }
 
-.large-icon:hover {
+.large-icon:not(.darkmode):hover {
 	color: rgba(0, 0, 0, 1);
 	cursor: pointer;
 	transition: color .75s ease-in-out;
+}
+
+.large-icon.darkmode:hover {
+	color: rgba(255, 255, 255, 1) !important;
+	cursor: pointer;
+	transition: color .75s ease-in-out;
+}
+
+.large-icon.extra-large {
+	font-size: 8rem;
+}
+
+.project-img.darkmode {border: 1px solid white !important;}
+.flip-card-img.darkmode {box-shadow: 1px  1px 1px white,1px -1px 1px white,-1px  1px 1px white,-1px -1px 1px white,4px  4px 4px rgba(255, 255, 255, 0.3),4px -4px 4px rgba(255, 255, 255, 0.3),-4px  4px 4px rgba(255, 255, 255, 0.3),-4px -4px 4px rgba(255, 255, 255, 0.3) !important;}
+.large-icon.darkmode {color: rgba(255, 255, 255, 0.6) !important;}
+.section.darkmode {
+	background-color: rgb(30, 30, 30) !important;
+	color: white !important;
+	box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.33), 1px -1px 1px rgba(255, 255, 255, 0.33), -1px 1px 1px rgba(255, 255, 255, 0.33), -1px -1px 1px rgba(255, 255, 255, 0.33) !important;
+    transition: background-color 0.75s ease-in-out, color 0.75s ease-in-out, box-shadow 0.75s ease-in-out;
 }
 
 .section {
