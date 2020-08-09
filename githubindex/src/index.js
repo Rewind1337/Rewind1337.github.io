@@ -53,9 +53,9 @@ $(document).ready(function () {
 		window.location.href = "../../" + newFolder + "/index.html";
 	})
 
-	// TODO
 	$(".project-repo").click(function() {
 		let newFolder = $(this).parent().parent().attr("data-folder");
+		window.location.href = "https://github.com/Rewind1337/rewind1337.github.io/tree/master/" + newFolder + "/";
 	})
 
 	let card_fade_out = 400;
