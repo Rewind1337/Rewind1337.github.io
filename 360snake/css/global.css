@@ -26,3 +26,28 @@
 	cursor: default;
 	-moz-user-select: none !important;user-select: none !important;
 }
+
+#navigation {
+	position: absolute;
+	padding: 4px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	top: 0px;
+	left: 0px;
+	width: 460px;
+	margin-left: -410px;
+
+	font-size: 2rem;
+	background-color: black;
+	border: white;
+	color: white;
+
+	box-shadow: 0px 0px 3px black;
+
+	transition: all 0.5s ease-out;
+}
+
+#navigation:hover {
+	margin-left: 0px;
+	transition: all 0.5s ease-in;
+}

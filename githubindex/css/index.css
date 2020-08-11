@@ -28,25 +28,20 @@ body {
 }
 
 .large-icon {
-	font-size: 3rem;
 	color: rgba(0, 0, 0, .6);
-	transition: color .75s ease-in-out;
+	transition: color .75s ease-in-out, font-size: 0.01s linear;
 }
 
 .large-icon:not(.darkmode):hover {
 	color: rgba(0, 0, 0, 1);
 	cursor: pointer;
-	transition: color .75s ease-in-out;
+	transition: color .75s ease-in-out, font-size: 0.01s linear;
 }
 
 .large-icon.darkmode:hover {
 	color: rgba(255, 255, 255, 1) !important;
 	cursor: pointer;
-	transition: color .75s ease-in-out;
-}
-
-.large-icon.extra-large {
-	font-size: 8rem;
+	transition: color .75s ease-in-out, font-size: 0.01s linear;
 }
 
 .project-img.darkmode {border: 1px solid white !important;}
@@ -65,7 +60,7 @@ body {
 	margin-bottom: 5rem;
 	margin-top: 0.5rem;
 
-	padding-bottom: 2rem;
+	padding-bottom: 2vw;
 
 	background-color: white;
 
@@ -105,16 +100,16 @@ body {
 	margin-top: 0px !important;
 	margin-left: 7% !important;
 	margin-right: 7% !important;
-	margin-bottom: 100px !important;
-	padding-top: 5rem;
-	padding-bottom: 6rem;
+	margin-bottom: 3vw !important;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
 	height: auto;
 	z-index: 102;}
 	#projects > div {float: left;}
-	#projects-title {font-size: 2.4rem;font-weight: 700;}
-	.project-name, .project-text {margin-bottom: 30px;}
-	.project-img {border: 1px solid black; transition: border 0.75s ease-in-out;}
-	.project-links > .project-link, .project-links > .project-repo {font-size: 1.5rem; cursor: pointer; color: black !important;}
+	#projects-title {font-size: 2.5vw;font-weight: 700;}
+	.project-name, .project-text {margin-bottom: 12px; font-size: 1.5vw;}
+	.project-img {border: 1px solid black; transition: border 0.75s ease-in-out; height: 25vw; width: 25vw;}
+	.project-links > .project-link, .project-links > .project-repo {font-size: 2vw; cursor: pointer; color: black !important;}
 	.project-links {}
 	.project {display: none;}
 	.project[data-id="0"] {display: block;}
@@ -134,6 +129,7 @@ body {
 	z-index: 101;
 	opacity: 0;
 }
+
 .avatarOrb {
 	width:100%;
 	position:relative;
@@ -167,43 +163,32 @@ body {
 }
 
 .socialLinks > li > span {
-	transition: all 0.75s ease-in-out;
-	-moz-transition: all 0.75s ease-in-out;
+	transition: all 0.05s ease-in-out;
+	-moz-transition: all 0.05s ease-in-out;
 }
 
 .socialLinks > li > img {
 	width: auto;
 	opacity: 0.5;
-	transition: all 0.75s ease-in-out;
-	-moz-transition: all 0.75s ease-in-out;
 }
 
 .socialLinks > li > img:hover {
 	opacity: 1;
-	transition: all 0.75s ease-in-out;
-	-moz-transition: all 0.75s ease-in-out;
 }
 
 .bg-custom-web {
 	background-color: rgb(200, 200, 255);
 }
-
-#characterCard {
-	padding-top: 40px;
-}
-
-#characterCard > * {
-	font-size: 2rem;
-}
+#characterCard > * {font-size: 2.5vw;}
+#characterCard {padding-top: 3vw;}
 
 .badge:hover {
-	transition: all 0.25s ease-in-out;
+	transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
 .badge {
-	transition: all 0.25s ease-in-out;
-	margin-top: 0.25rem;
-	font-size: 1.2rem;
+	transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+	font-size: 1.5vw;
 }
 
 .badge-2020:hover {background-color: rgb(230, 230, 230);}
@@ -226,13 +211,13 @@ body {
 
 .flip-card {
   background-color: transparent;
-  width: 256px;
+  width: 20vw;
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 5%;
   margin-bottom: 5%;
   border-radius: 8px;
-  height: 256px;
+  height: 20vw;
   perspective: 777px;
 }
 

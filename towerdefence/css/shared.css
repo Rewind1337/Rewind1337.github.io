@@ -22,6 +22,10 @@ h1 {font-size: 2.2rem; text-decoration: underline;color: rgb(255, 255, 220);}
 	padding-right: 2px !important;
 }
 
+.container-fluid {
+	padding-top: 16px;
+}
+
 .popModal {
 	display: none;
 	position: absolute;
@@ -65,8 +69,10 @@ h1 {font-size: 2.2rem; text-decoration: underline;color: rgb(255, 255, 220);}
 	margin-top: 4px;
 	margin-left: 4px;
 }
-
-.row {
+a {
+	font-size: 2rem;
+}
+.row:not(.titleRow) {
 	margin-left: 0px !important;
 	margin-right: 0px !important;
 	padding-left: 0px !important;
@@ -285,3 +291,29 @@ h1 {font-size: 2.2rem; text-decoration: underline;color: rgb(255, 255, 220);}
 #spellMenuRow, #towerMenuRow {display: none;}
 .ui-resource {display: none;}
 .wave-box {display: none;}
+
+
+#navigation {
+	position: absolute;
+	padding: 4px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	top: 0px;
+	left: 0px;
+	width: 460px;
+	margin-left: -410px;
+
+	font-size: 2rem;
+	background-color: black;
+	border: white;
+	color: white;
+
+	box-shadow: 0px 0px 3px black;
+
+	transition: all 0.5s ease-out;
+}
+
+#navigation:hover {
+	margin-left: 0px;
+	transition: all 0.5s ease-in;
+}
